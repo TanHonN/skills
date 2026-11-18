@@ -1,17 +1,12 @@
 # Experimental Skills
 
-`experimental-skills` 是正在开发、验证或尚未完成稳定发布准备的个人 skill 聚合仓库。仓库保留原有 skill 集合的一级目录，具体 skill 内容暂不做改写。
+`experimental-skills` 是正在开发、验证或尚未完成稳定发布准备的个人 skill 聚合仓库。
 
 ## Skill 集合
 
-仓库按 `<集合名>/skills/<skill-name>/` 组织具体 skill，各集合的 README 继续维护集合内的详细清单。
+仓库按 `<集合名>/<skill-name>/` 组织具体 skill；集合目录保留自己的 README，必要时可直接包含集合级辅助入口；集合说明和 skill 清单由对应集合 README 承载。
 
-- [life-skill](life-skill/)：生活工具、浏览器自动化、幕布编辑和 JetBrains API 学习。
-- [principle-skill](principle-skill/)：事物分析、问题分析、信息组织和迭代推进原则。
-- [shop-skill](shop-skill/)：国内电商购物概念和商品推荐。
-- [version-skill](version-skill/)：Git 仓库提交和远程同步。
-
-各集合的 README 保留该集合内的具体 skill 清单、用途说明和原有维护信息。
+- [life-skill](life-skill/)：生活购物比价和浏览器自动化。
 
 ## 获取仓库
 
@@ -19,4 +14,20 @@
 git clone https://github.com/TanHonN/skills.git
 ```
 
-实验仓库用于承载开发中的内容。skill 稳定后，可以将对应集合迁入 `official-skills`，再按成熟仓库的发布规则维护。
+## 安装
+
+当前使用 `npx skills` 从聚合仓库安装全部实验 skill：
+
+```bash
+npx skills add https://github.com/TanHonN/skills.git --full-depth -g -a universal --skill '*' -y
+```
+
+更新已安装的 skill：
+
+```bash
+npx skills update -g -y
+```
+
+源仓库删除或改名后，更新不会自动清理本地旧 skill；需要按旧名称显式执行 `npx skills remove <skill-name> -g -a universal -y`。
+
+本仓库承载开发和验证中的 skill 集合；skill 稳定后，可以将对应集合迁入 `official-skills`，再按成熟仓库的维护规则处理。
