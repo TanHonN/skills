@@ -6,7 +6,7 @@
 
 仓库按 `<集合名>/<skill-name>/` 组织具体 skill；集合目录保留自己的 README，必要时可直接包含集合级辅助入口；集合说明和 skill 清单由对应集合 README 承载。
 
-- [life-skill](life-skill/)：生活购物比价和浏览器自动化。
+- [life-skill](life-skill/)：浏览器循环任务自动化。
 
 ## 获取仓库
 
